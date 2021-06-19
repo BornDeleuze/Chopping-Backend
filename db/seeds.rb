@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Game.destroy_all
+
+10.times do 
+    User.create(name: Faker::Name.first_name)
+end
+
+User.all.each do |user|
+    5.times do
+        g = user.games.build(score: rand(30))
+        g.save
+    end
+end
+
+puts "done seeded"
