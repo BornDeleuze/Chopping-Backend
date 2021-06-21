@@ -11,6 +11,7 @@ Game.destroy_all
 10.times do 
     User.create(name: Faker::Name.initials)
 end
+User.create(name:"XXX")
 
 User.all.each do |user|
     5.times do
