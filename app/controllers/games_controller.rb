@@ -3,7 +3,7 @@ class GamesController < ApplicationController
 
   # GET /games
   def index
-    @games = Game.all
+    @games = Game.top_scores
   #   if params[:user_id]
   #     user= User.find_by_id(params[:user_id])
   #     @games = user.games.top_ten_scores
