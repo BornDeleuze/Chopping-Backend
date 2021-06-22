@@ -3,12 +3,13 @@ class GamesController < ApplicationController
 
   # GET /games
   def index
-    if params[:user_id]
-      user= User.find_by_id(params[:user_id])
-      @games = user.games.top_ten_scores
-    else
-      @games = Game.top_ten_scores
-  end
+    @games = Game.all
+  #   if params[:user_id]
+  #     user= User.find_by_id(params[:user_id])
+  #     @games = user.games.top_ten_scores
+  #   else
+  #     @games = Game.top_ten_scores
+  # end
     render json: @games
   end
 
