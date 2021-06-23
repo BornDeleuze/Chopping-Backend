@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Chopping is a simple game built with a Javascript frontend, with Rails as a backend API.
+The point of the game is to chop as much wood as you can before sasquatch eats you.
 
-Things you may want to cover:
+The repo for the frontend can be found here
+https://github.com/BornDeleuze/Chopping-Frontend
 
-* Ruby version
+To run the game, run the server for the backend with "rails s" and this app with "npx serve". Then in browser navigate to localhost:5000. 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Thanks!
