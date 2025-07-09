@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: chopping-backend
+    env: ruby
+    plan: free
+    buildCommand: ./render-build.sh
+    startCommand: bundle exec rails server
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: your-database-name
+          property: connectionString
+      - key: SECRET_KEY_BASE
+        generateValue: true
